@@ -10,4 +10,5 @@ public class Tile : ScriptableObject {
 	public float strength;
 	public bool multiDrop = false;
 	public bool grass = false;
+	public int tileType;
 }

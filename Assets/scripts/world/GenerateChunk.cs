@@ -24,8 +24,8 @@ public class GenerateChunk : MonoBehaviour {
 	public float diamondChance;
 
 	public void Start () {
-		seed = Random.Range (-10000f, 10000f);
 		Generate ();
+		Debug.Log (seed);
 	}
 
 	public void Generate () {

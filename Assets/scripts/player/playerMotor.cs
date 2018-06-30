@@ -76,30 +76,25 @@ public class playerMotor : MonoBehaviour {
 		Vector3 pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		RaycastHit2D hit = Physics2D.Raycast (pos, Vector2.zero);
 		if (hit.collider.gameObject.GetComponent<TileData> () != null && Vector2.Distance (hit.transform.position, this.gameObject.transform.position) < 4) {
+		
+			hit.collider.gameObject.GetComponent<TileData> ().health -= Time.deltaTime;
 
-			Destroy (hit.collider.gameObject);
+			if (hit.collider.gameObject.GetComponent<TileData> ().health <= 0) {
 
-//			if (hit.collider.gameObject.GetComponent<TileData> ().tileType.grass == true) {
-//				// if the tile is grass
-//				if (!GetComponent<inventory>().full) {
-//					Destroy (hit.collider.gameObject);
-//					GetComponent<inventory>().AddItem(dirtItem, 1);
-//				}
-//
-//			} else if (hit.collider.gameObject.GetComponent<TileData> ().tileType.multiDrop == true) {
-//				//if the tile drops multiple of the item
-//				if (!GetComponent<inventory>().full) {
-//					Destroy (hit.collider.gameObject);
-//					GetComponent<inventory>().AddItem(hit.collider.gameObject.GetComponent<TileData>().tileType, Random.Range (1, 4));
-//				}
-//
-//			} else {
-//				//if the tile has no wierdness happening, just a normal basic tile
-//				if (!GetComponent<inventory>().full) {
-//					Destroy (hit.collider.gameObject);
-//					GetComponent<inventory>().AddItem(hit.collider.gameObject.GetComponent<TileData>().tileType, 1);
-//				}
-//			}
+				if (hit.collider.gameObject.GetComponent<TileData> ().tileType.grass == true) {
+					// if the tile is grass
+					Destroy (hit.collider.gameObject);
+					GetComponent<inventory> ().AddItem (dirtItem, 1);
+				} else if (hit.collider.gameObject.GetComponent<TileData> ().tileType.multiDrop == true) {
+					//if the tile drops multiple of the item
+					Destroy (hit.collider.gameObject);
+					GetComponent<inventory> ().AddItem (hit.collider.gameObject.GetComponent<TileData> ().tileType, Random.Range (1, 4));
+				} else {
+					//if the tile has no wierdness happening, just a normal basic tile
+					Destroy (hit.collider.gameObject);
+					GetComponent<inventory> ().AddItem (hit.collider.gameObject.GetComponent<TileData> ().tileType, 1);
+				}
+			}
 		}
 	}
 }

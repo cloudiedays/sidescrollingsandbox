@@ -16,3 +16,4 @@ MonoBehaviour:
   strength: 10
   multiDrop: 1
   grass: 0
+  tileType: 4

@@ -318,8 +318,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92392b24446114d4f9b218401bf83110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsInInventory: []
-  full: 0
+  inventoryText: {fileID: 0}
+  selectionText: {fileID: 0}
+  tiles:
+  - {fileID: 1555264593393842, guid: b8e52d4d12e2e4176a841c73d30732b3, type: 2}
+  - {fileID: 1940158087122702, guid: 6f9405246bf9b4b0c8662eed44325b1b, type: 2}
+  - {fileID: 1931451681882914, guid: fa5b766c170ca4724bbc1eea4395a803, type: 2}
+  - {fileID: 1447419970203940, guid: 8a64ccb4c4f1840159cb3e2d599ca62b, type: 2}
+  - {fileID: 1808702656383234, guid: 8301d0afeb49447ccb6533d0e7068c31, type: 2}
+  worldParent: {fileID: 0}
 --- !u!114 &114657648153970650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -335,13 +342,13 @@ MonoBehaviour:
   playerPrefab: {fileID: 1534896782166388}
   speed: 5
   jumpSpeed: 5
-  maxHealth: 15
-  health: 15
+  maxHealth: 1500
+  health: 1500
   starveDecrease: 1
   healthBar: {fileID: 114039291799622750, guid: d1a192924eff2496fa11d71ab3a640b9,
     type: 2}
-  maxHunger: 15
-  hunger: 15
+  maxHunger: 1500
+  hunger: 1400
   hungerDecrease: 0.5
   hungerBar: {fileID: 114004223414869724, guid: d1a192924eff2496fa11d71ab3a640b9,
     type: 2}
