@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class playerMotor : MonoBehaviour {
 
@@ -83,14 +84,17 @@ public class playerMotor : MonoBehaviour {
 
 				if (hit.collider.gameObject.GetComponent<TileData> ().tileType.grass == true) {
 					// if the tile is grass
+					hit.collider.GetComponent<SpriteRenderer>().color = Color.Lerp (Color.white, Color.clear, .5f);
 					Destroy (hit.collider.gameObject);
 					GetComponent<inventory> ().AddItem (dirtItem, 1);
 				} else if (hit.collider.gameObject.GetComponent<TileData> ().tileType.multiDrop == true) {
 					//if the tile drops multiple of the item
+					hit.collider.GetComponent<SpriteRenderer>().color = Color.Lerp (Color.white, Color.clear, .5f);
 					Destroy (hit.collider.gameObject);
 					GetComponent<inventory> ().AddItem (hit.collider.gameObject.GetComponent<TileData> ().tileType, Random.Range (1, 4));
 				} else {
 					//if the tile has no wierdness happening, just a normal basic tile
+					hit.collider.GetComponent<SpriteRenderer>().color = Color.Lerp (Color.white, Color.clear, .5f);
 					Destroy (hit.collider.gameObject);
 					GetComponent<inventory> ().AddItem (hit.collider.gameObject.GetComponent<TileData> ().tileType, 1);
 				}

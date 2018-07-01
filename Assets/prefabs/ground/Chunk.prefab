@@ -63,6 +63,6 @@ MonoBehaviour:
   ironTile: {fileID: 1447419970203940, guid: 8a64ccb4c4f1840159cb3e2d599ca62b, type: 2}
   diamondTile: {fileID: 1808702656383234, guid: 8301d0afeb49447ccb6533d0e7068c31,
     type: 2}
-  coalChance: 0.5
-  ironChance: 0.125
-  diamondChance: 0.018
+  coalChance: 2.5
+  ironChance: 1.5
+  diamondChance: 0.575

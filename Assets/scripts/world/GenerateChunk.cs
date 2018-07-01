@@ -25,7 +25,6 @@ public class GenerateChunk : MonoBehaviour {
 
 	public void Start () {
 		Generate ();
-		Debug.Log (seed);
 	}
 
 	public void Generate () {
@@ -50,20 +49,22 @@ public class GenerateChunk : MonoBehaviour {
 
 	public void Populate () {
 		foreach (GameObject t in GameObject.FindGameObjectsWithTag("Stone")) {
-			float r = Random.Range (0f, 100f);
-			GameObject selectedTile = null;
-			if (r < diamondChance) {
-				selectedTile = diamondTile;
-			} else if (r < ironChance) {
-				selectedTile = ironTile;
-			} else if (r < coalChance) {
-				selectedTile = coalTile;
-			}
+			if (t.transform.parent == this.gameObject.transform) {
+				float r = Random.Range (0f, 100f);
+				GameObject selectedTile = null;
+				if (r < diamondChance) {
+					selectedTile = diamondTile;
+				} else if (r < ironChance) {
+					selectedTile = ironTile;
+				} else if (r < coalChance) {
+					selectedTile = coalTile;
+				}
 		
-			if (selectedTile != null) {
-				GameObject newResourceTile = Instantiate (selectedTile, t.transform.position, Quaternion.identity);
-				newResourceTile.transform.parent = this.transform;
-				Destroy (t);
+				if (selectedTile != null) {
+					GameObject newResourceTile = Instantiate (selectedTile, t.transform.position, Quaternion.identity);
+					newResourceTile.transform.parent = this.transform;
+					Destroy (t);
+				}
 			}
 		}
 	}
