@@ -9,32 +9,32 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1808702656383234}
+  m_RootGameObject: {fileID: 1940158087122702}
   m_IsPrefabParent: 1
---- !u!1 &1808702656383234
+--- !u!1 &1940158087122702
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4414443283964326}
-  - component: {fileID: 212388401228615222}
-  - component: {fileID: 61784099476058160}
-  - component: {fileID: 114244380970968434}
+  - component: {fileID: 4285039984617618}
+  - component: {fileID: 212526294370372726}
+  - component: {fileID: 61308195423545002}
+  - component: {fileID: 114065499677163976}
   m_Layer: 8
-  m_Name: Diamonds
-  m_TagString: Ground
+  m_Name: Stone
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4414443283964326
+--- !u!4 &4285039984617618
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1808702656383234}
+  m_GameObject: {fileID: 1940158087122702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -42,12 +42,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61784099476058160
+--- !u!61 &61308195423545002
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1808702656383234}
+  m_GameObject: {fileID: 1940158087122702}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 411366dc070d146cf9450557f48e59b9, type: 2}
@@ -67,24 +67,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114244380970968434
+--- !u!114 &114065499677163976
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1808702656383234}
+  m_GameObject: {fileID: 1940158087122702}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8820f255fb64b49bd93715b1e16ed39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: {fileID: 11400000, guid: 9f5652af2bb2f4c3d821960c4cca8a60, type: 2}
---- !u!212 &212388401228615222
+  tileType: {fileID: 11400000, guid: e63a7bda58784495d9b22e66934a36c4, type: 2}
+  health: 0
+--- !u!212 &212526294370372726
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1808702656383234}
+  m_GameObject: {fileID: 1940158087122702}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -93,7 +94,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2c7ee19dbae894805859a12a3cb6381c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,7 +114,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c82c565e8eb974097aabfd55db50b5dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ef8678afa956644e9a5ae651f7f63f23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

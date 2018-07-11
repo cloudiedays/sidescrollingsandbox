@@ -9,11 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7277940c0cdca4f2984beee51e2b3bd8, type: 3}
-  m_Name: Stone
+  m_Name: Wood
   m_EditorClassIdentifier: 
-  tileName: Stone
-  icon: {fileID: 21300000, guid: ef8678afa956644e9a5ae651f7f63f23, type: 3}
+  tileName: Wood
+  icon: {fileID: 21300000, guid: 32dc321ff51fd4a648f88a36068c21a2, type: 3}
   strength: 5
   multiDrop: 0
   grass: 0
-  tileType: 1
+  tileType: 5
+  description: Generic block description

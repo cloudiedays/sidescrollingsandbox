@@ -17,3 +17,4 @@ MonoBehaviour:
   multiDrop: 0
   grass: 0
   tileType: 0
+  description: Generic block description

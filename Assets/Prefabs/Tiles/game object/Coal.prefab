@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: {fileID: 11400000, guid: 3540f15cf2c6f4955ab5493bcf17cb2d, type: 2}
+  health: 0
 --- !u!212 &212747464664590038
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -93,7 +94,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2c7ee19dbae894805859a12a3cb6381c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

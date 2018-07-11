@@ -11,4 +11,5 @@ public class Tile : ScriptableObject {
 	public bool multiDrop = false;
 	public bool grass = false;
 	public int tileType;
+	[TextArea] public string description;
 }

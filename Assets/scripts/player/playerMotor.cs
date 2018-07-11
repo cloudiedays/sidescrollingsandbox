@@ -50,6 +50,7 @@ public class playerMotor : MonoBehaviour {
 			isPaused = !isPaused;
 		}
 		if (isPaused) {
+			
 			pauseMenu.SetActive (true);
 		}
 
