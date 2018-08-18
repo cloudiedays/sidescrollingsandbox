@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-	public Transform target;
+	private Transform target;
 	[Range(0, 5)]
 	public float cameraSpeed;
 	public Vector3 offset;
 
 	// Use this for initialization
 	void Start () {
-		//target = GameObject.FindGameObjectWithTag ("Player").transform;
+		target = GameObject.FindGameObjectWithTag ("Player").transform;
 	}
 	
 	// Update is called once per frame

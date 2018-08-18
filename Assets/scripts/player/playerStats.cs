@@ -60,17 +60,4 @@ public class playerStats : MonoBehaviour {
 		//needs to be last
 		Destroy (this.gameObject);
 	}
-
-
-	public void Save () {
-		saveSystem.SavePlayer (this);
-	}
-
-	public void Load () {
-		int[] loadedStats = saveSystem.LoadPlayer ();
-
-		speed = loadedStats [0];
-		health = loadedStats [1];
-		hunger = loadedStats [2];
-	}
 }
