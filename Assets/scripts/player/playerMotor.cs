@@ -85,17 +85,25 @@ public class playerMotor : MonoBehaviour {
 
 				if (hit.collider.gameObject.GetComponent<TileData> ().tileType.grass == true) {
 					// if the tile is grass
-					hit.collider.GetComponent<SpriteRenderer>().color = Color.Lerp (Color.white, Color.clear, .5f);
 					Destroy (hit.collider.gameObject);
 					GetComponent<inventory> ().AddItem (dirtItem, 1);
 				} else if (hit.collider.gameObject.GetComponent<TileData> ().tileType.multiDrop == true) {
 					//if the tile drops multiple of the item
-					hit.collider.GetComponent<SpriteRenderer>().color = Color.Lerp (Color.white, Color.clear, .5f);
 					Destroy (hit.collider.gameObject);
 					GetComponent<inventory> ().AddItem (hit.collider.gameObject.GetComponent<TileData> ().tileType, Random.Range (1, 4));
+				} else if (hit.collider.gameObject.GetComponent<TileData> ().tileType.tileType == 6) {
+					//if the tile is leaves
+					if (hit.collider.gameObject.GetComponent<TileData> ().tileType.name != "Leaves") {
+						Debug.LogError ("playerMotor:DigBlock --- You changed the leaves tile type,,, better fix that");
+					} else {
+						Debug.Log ("leaves");
+						Destroy (hit.collider.gameObject);
+						if (Random.Range (1, 4) == 1) {
+							GetComponent<inventory> ().AddItem (hit.collider.gameObject.GetComponent<TileData> ().tileType, 1);
+						}
+					}
 				} else {
 					//if the tile has no wierdness happening, just a normal basic tile
-					hit.collider.GetComponent<SpriteRenderer>().color = Color.Lerp (Color.white, Color.clear, .5f);
 					Destroy (hit.collider.gameObject);
 					GetComponent<inventory> ().AddItem (hit.collider.gameObject.GetComponent<TileData> ().tileType, 1);
 				}

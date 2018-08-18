@@ -343,12 +343,12 @@ MonoBehaviour:
   playerPrefab: {fileID: 1534896782166388}
   speed: 5
   jumpSpeed: 5
-  maxHealth: 1500
-  health: 1500
+  maxHealth: 20
+  health: 20
   starveDecrease: 1
   healthBar: {fileID: 0}
-  maxHunger: 1500
-  hunger: 1500
+  maxHunger: 20
+  hunger: 20
   hungerDecrease: 0.5
   hungerBar: {fileID: 0}
 --- !u!212 &212036262630100224

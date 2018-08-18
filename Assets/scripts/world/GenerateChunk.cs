@@ -58,7 +58,7 @@ public class GenerateChunk : MonoBehaviour {
 				float value = (Mathf.PerlinNoise(t.transform.position.x / 32.0f,t.transform.position.y / 32.0f) * caveSeed);
 				if (value < caveChance ) { //cave opening
 					Destroy (t);
-				} else { //not cave opening 
+				} else { //not cave opening (aka: ores)
 					float r = Random.Range (0f, 100f);
 					GameObject selectedTile = null;
 					if (r < diamondChance) {
@@ -79,7 +79,7 @@ public class GenerateChunk : MonoBehaviour {
 		}
 
 
-		// ores
+		// trees
 		foreach (GameObject g in GameObject.FindGameObjectsWithTag("Grass")) {
 			if (g.transform.parent == this.gameObject.transform) {
 				float r = Random.Range (0f, 100f);
